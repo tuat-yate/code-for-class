@@ -1,6 +1,4 @@
-# usage:
-# python get_data.py KeyData...
-
+from abc import abstractproperty
 import sys
 import csv
 
@@ -64,8 +62,9 @@ for gyou in range(len(out)):
         else:
             out[gyou][retu]=str(out[gyou][retu])
 
-for gyou in out:
-    print(','.join(gyou))
+for i in range(len(afdata)):
+    afdata[i].extend(out[i])
+    print(','.join(afdata[i]))
 
 # 出力されたデータをコピペしてExcelに貼り付け
 # そのままだとうまく貼れない場合があるので、「データ」タブの「区切り位置」をクリック、区切り文字にカンマを追加する
