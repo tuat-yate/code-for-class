@@ -1,4 +1,6 @@
-from abc import abstractproperty
+# usage:
+# python get_data.py KeyData...
+
 import sys
 import csv
 
